@@ -3,7 +3,7 @@ interface Book{
      id:number,
      title:string,
      author:string,
-     image:string,
+     image:string,  
      available:boolean;
 }
 let books:Book[] = [
@@ -78,7 +78,7 @@ export async function PUT(req:Request){
      );
      return NextResponse.json({message:"Book updated successfully "},{status:200});
      }catch(error){
-           return NextResponse.json({message:"Error updating Book."},{status:500});
+           return NextResponse.json({message:"Error updating book.",error},{status:500});
      }
 }
 
